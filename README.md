@@ -52,6 +52,7 @@ Join our community of developers creating universal apps.
 
 ## Project structure 🐻
 
+```shell
 PROJET_REACT-NATIVE-POKEDEX/
 │
 ├── app/
