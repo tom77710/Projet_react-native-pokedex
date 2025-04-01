@@ -8,7 +8,7 @@ import {
 import { Card } from "@/components/Card";
 import { ThemedText } from "@/components/ThemedText";
 import { useThemeColors } from "@/hooks/useThemeColors";
-import { Link } from "expo-router";
+import { Link, Href } from "expo-router";
 import { getPokemonArtwork, getPokemonId } from "@/functions/pokemon";
 
 type Props = {
@@ -20,7 +20,7 @@ type Props = {
 export function PokemonCard({ style, id, name }: Props) {
   const colors = useThemeColors();
   return (
-    <Link href={{ pathname: "/pokemon/[id]", params: { id: id } }} asChild>
+    <Link href={{ pathname: "/pokemon/[id]", params: { id: id.toString() } } as any} asChild>
       <Pressable style={style}>
         <Card style={[styles.card]}>
           <ThemedText style={styles.id} variant="caption" color="grayMedium">

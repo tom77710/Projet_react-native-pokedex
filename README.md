@@ -53,20 +53,54 @@ Join our community of developers creating universal apps.
 ## Project structure 🐻
 
 ```shell
-PROJET_REACT-NATIVE-POKEDEX/
-│
+PROJET_REACT-NATIVE-POKEDEX
+├── .expo/
+├── .vscode/
+│   └── settings.json
 ├── app/
+│   ├── pokemon/
+│   │   └── [id].tsx
 │   ├── _layout.tsx
+│   ├── about.tsx
 │   └── index.tsx
-│
-├── app-example/
-│
 ├── assets/
-│
+│   ├── fonts/
+│   └── images/
+│       ├── alpha.png
+│       ├── back.png
+│       ├── next.png
+│       ├── number.png
+│       ├── pokeball_big.png
+│       ├── pokeball.png
+│       ├── prev.png
+│       ├── search.png
+│       ├── size.png
+│       └── weight.png
+├── components/
+│   ├── pokemon/
+│   │   ├── PokemonCard.tsx
+│   │   ├── PokemonSpec.tsx
+│   │   ├── PokemonStat.tsx
+│   │   └── PokemonType.tsx
+│   ├── Card.tsx
+│   ├── Radio.tsx
+│   ├── RootView.tsx
+│   ├── Row.tsx
+│   ├── SearchBar.tsx
+│   ├── SortButton.tsx
+│   └── ThemedText.tsx
+├── constants/
+│   ├── Colors.ts
+│   └── Shadows.ts
+├── functions/
+│   └── pokemon.ts
+├── hooks/
+│   ├── useFetchQuery.ts
+│   └── useThemeColors.ts
 ├── node_modules/
-│
 ├── .gitignore
 ├── app.json
+├── expo-env.d.ts
 ├── package-lock.json
 ├── package.json
 ├── README.md
