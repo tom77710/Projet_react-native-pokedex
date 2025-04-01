@@ -1,17 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Link } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Stack } from "expo-router";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
-export default function Index() {
+const queryClient = new QueryClient()
+
+export default function RootLayout() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Link href="/about">A propos</Link>
-      <Link href={{ pathname: "/pokemon/[id]", params: { id: 3 } }}>Pokemon 3</Link>
-    </SafeAreaView>
+      <QueryClientProvider client={queryClient}>
+          <Stack
+              screenOptions={{
+                  headerShown: false
+              }}
+          />
+      </QueryClientProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { backgroundColor: "#FF0000" }
-});
