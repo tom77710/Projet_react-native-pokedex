@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Projet_react-native-pokedex",
-    "slug": "Projet_react-native-pokedex",
+    "slug": "pokedex-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tom77710.pokedexreactnative"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "455fee2d-316c-4305-9942-569918816acb"
+      }
+    },
+    "owner": "tom77710"
   }
 }
